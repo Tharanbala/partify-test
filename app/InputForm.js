@@ -49,7 +49,7 @@ export default function MainPage() {
     <div className="h-screen bg-nord-gray grid grid-cols-2">
        <div className="flex flex-col justify-start items-center">
             <div className="text-black text-3xl absolute m-28">
-                <p><strong>Partify</strong> is North America's leading automotive parts provider. After being in the automotive industry for over 11 years, Partify has mastered the art of painted and unpainted auto parts.</p>
+                <p><strong>Partify</strong> is North America leading automotive parts provider. After being in the automotive industry for over 11 years, Partify has mastered the art of painted and unpainted auto parts.</p>
             </div>
             <div className="w-full flex justify-center ">
                 <CarModel/>
