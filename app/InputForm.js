@@ -27,22 +27,27 @@ export default function MainPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log(formData)
-
-    const matchedData = dataset.find(item => 
+    if (formData.year && formData.make && formData.model && formData.product) {
+      const matchedData = dataset.find(item => 
         item.Year.toString().trim() === formData.year.toString().trim() &&
         item.Make.toString().trim().toLowerCase() === formData.make.toString().trim().toLowerCase() &&
         item.Model.toString().trim().toLowerCase() === formData.model.toString().trim().toLowerCase() &&
         item['Product Type'].toString().trim().toLowerCase() === formData.product.toString().trim().toLowerCase()
       );
 
-    console.log(matchedData)
+      console.log(matchedData)
 
-    if (matchedData) {
-      router.push(matchedData.URL);
-    } else {
-      alert('No matching product found!');
+      if (matchedData) {
+        router.push(matchedData.URL);
+      } else {
+        alert('No matching product found!');
+      }
     }
+    else {
+      alert('No value selected')
+    }
+
+    
   };
 
   return (
